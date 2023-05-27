@@ -142,7 +142,7 @@
             
             <!-- <div class="button"> -->
               <div class="data-form-wrapper">
-                <form action="#" class="contact-form">
+                <form class="contact-form" name="heroSectionForm" id="heroSectionForm" >
                   <div class="row">
                     <div class="col-md-4">
                       <input type="text" name="name" id="name" placeholder="Name" required />
@@ -720,7 +720,7 @@
                 </div>
               </div>
             </div>
-            <form action="#" class="contact-form">
+            <form name="contactSectionForm" id="contactSectionForm" class="contact-form">
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" name="name" id="name" placeholder="Name" required />
@@ -734,7 +734,7 @@
                   <input type="text" name="phone" id="phone" placeholder="Phone" required />
                 </div>
                 <div class="col-md-6">
-                  <input type="text" name="subject" id="email" placeholder="Grade" required />
+                  <input type="text" name="grade" id="grade" placeholder="Grade" required />
                 </div>
               </div>
               <div class="row">
@@ -812,10 +812,10 @@
               <div class="footer-widget newsletter">
                 <h5>Subscribe</h5>
                 <p>Subscribe to our newsletter for the latest updates</p>
-                <form action="#" method="get" target="_blank" class="newsletter-form">
-                  <input name="EMAIL" placeholder="Email address" required="required" type="email" />
+                <form name="newsletterForm" id="newsletterForm" class="newsletter-form">
+                  <input name="email" placeholder="Email address" required="required" type="email" />
                   <div class="button">
-                    <button class="sub-btn">
+                    <button type="submit" class="sub-btn">
                       <i class="lni lni-envelope"></i>
                     </button>
                   </div>
@@ -843,7 +843,18 @@
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tiny-slider.js"></script>
+  <!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby1ju4XzEoShsv4bcUksDcsJh-GTS8EiTVxw2QWSbLQbCJwCjjhBx3QZI_SrxO8FPxtmQ/exec'
+const form = document.forms['heroSectionForm']
 
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! your form is submitted successfully." ))
+    .then(() => {  window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+})
+  </script> -->
 </body>
 
 </html>

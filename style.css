@@ -384,19 +384,6 @@ p {
   color: var(--dark-3);
 }
 
-.made-in-ayroui{
-  position: fixed;
-  left: 5px;
-  bottom: 5px;
-  z-index: 999;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.made-in-ayroui:hover{
-  transform: translateY(-5px);
-}
-
 
 /*===========================
   NAVBAR css 
