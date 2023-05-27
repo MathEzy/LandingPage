@@ -307,7 +307,7 @@ p {
   border-radius: 0;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all .3s ease-out 0s;
@@ -323,6 +323,18 @@ p {
   background-color: var(--dark-1);
 }
 
+.whatsapp_float{
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 20;
+}
+.whatsapp-img{
+  width: 50px;
+  border-radius: 8px;
+}
 /*===========================
   Section Title Five CSS
 ===========================*/
@@ -904,7 +916,11 @@ p {
   color: var(--dark-3);
   pointer-events: none;
 }
-
+.navbar-book-a-demo{
+  border-color: var(--white);
+  color: var(--white);
+  margin: 0;
+}
 /*======================================
     header Area CSS
 ========================================*/
