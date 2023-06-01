@@ -109,6 +109,7 @@ form1.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL1, { method: 'POST', body: new FormData(form1)})
     .then(response => console.log("Success", response))
+    .then(SuccessToast())
     .then(() => {  window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
@@ -119,12 +120,14 @@ const form2 = document.forms['contactSectionForm']
 
 form2.addEventListener('submit', e => {
     e.preventDefault()
-    // let formData = new FormData(form2)
-    const phoneNumber = phoneInput.getNumber(intlTelInputUtils.numberFormat.E164);
-    console.log(phoneNumber)
-    fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+    var country = phoneInput.getSelectedCountryData();
+    let formData = new FormData(form2)
+    formData.append("country", country.name)
+    formData.append("countryDialCode", country.dialCode)
+    fetch(scriptURL2, { method: 'POST', body: formData})
     .then(response => console.log("Success", response))
-    // .then(() => {  window.location.reload(); })
+    .then(SuccessToast())
+    .then(() => {  window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
 
@@ -136,6 +139,7 @@ form3.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL3, { method: 'POST', body: new FormData(form3)})
     .then(response => console.log("Success", response))
+    .then(SuccessToast())
     .then(() => {  window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
@@ -180,3 +184,15 @@ const workSecObserver = new IntersectionObserver(workSectionObserve, {
 });
 
 workSecObserver.observe(workSection);
+
+//toasty
+let option = {
+    animation : true,
+    delay : 4000
+}
+
+function SuccessToast(){
+    let ToastHTMLElement = document.getElementById("liveToast");
+    let toastElement = new bootstrap.Toast(ToastHTMLElement, option)
+    toastElement.show()
+}

@@ -1862,13 +1862,6 @@ p {
   margin-top: -130px;
 }
 
-/* intl phone number */
-.iti__flag {background-image: url("assets/images/flags.png");}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {background-image: url("assets/images/flags@2x.png");}
-}
-
 /* Footer eleven css */
 .footer-eleven {
   padding-top: 100px;
