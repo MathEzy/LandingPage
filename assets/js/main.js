@@ -119,9 +119,12 @@ const form2 = document.forms['contactSectionForm']
 
 form2.addEventListener('submit', e => {
     e.preventDefault()
+    // let formData = new FormData(form2)
+    const phoneNumber = phoneInput.getNumber(intlTelInputUtils.numberFormat.E164);
+    console.log(phoneNumber)
     fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
     .then(response => console.log("Success", response))
-    .then(() => {  window.location.reload(); })
+    // .then(() => {  window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
 
@@ -136,3 +139,44 @@ form3.addEventListener('submit', e => {
     .then(() => {  window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
+
+
+const workSection = document.querySelector(".section-work-data");
+
+const workSectionObserve = (entries) => {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+
+    const counterNum = document.querySelectorAll(".counter-numbers");
+    // console.log(counterNum);
+    const speed = 5;
+
+    counterNum.forEach((curNumber) => {
+        const updateNumber = () => {
+            const targetNumber = parseInt(curNumber.dataset.number);
+            // console.log(targetNumber);
+            const initialNumber = parseInt(curNumber.innerText);
+            // console.log(initialNumber);
+            const incrementNumber = Math.trunc(targetNumber / speed);
+            // i am adding the value to the main number
+            // console.log(incrementNumber);
+
+            if (initialNumber < targetNumber) {
+                curNumber.innerText = `${initialNumber + incrementNumber}+`;
+                setTimeout(updateNumber, 50);
+            } else {
+                curNumber.innerText = `${targetNumber}+`;
+            }
+
+        };
+        updateNumber();
+    });
+};
+
+const workSecObserver = new IntersectionObserver(workSectionObserve, {
+    root: null,
+    threshold: 0,
+});
+
+workSecObserver.observe(workSection);

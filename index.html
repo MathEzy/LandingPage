@@ -26,7 +26,13 @@
   <!--====== gLightBox css ======-->
   <link rel="stylesheet" href="assets/css/glightbox.min.css" />
 
+  <!-- <link rel="stylesheet" href="assets/css/intlTelNum/intlTelInput.css"> -->
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 
 <body>
@@ -135,9 +141,9 @@
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-content">
-            <h1>Your Online Resource for Effective and Engaging Maths Education.</h1>
+            <h1>#1 Online Resource for Effective and Engaging Maths Education!</h1>
             <p>
-              Unlock math success at your own pace with our engaging and interactive online tools. Overcome fears and achieve mastery with our commitment to personalized learning, no matter your starting point.
+              Unlock math success at your own pace with our engaging and interactive online tools.
             </p>
             
             <!-- <div class="button"> -->
@@ -148,7 +154,7 @@
                       <input type="text" name="name" id="name" placeholder="Name" required />
                     </div>
                     <div class="col-md-4">
-                      <input type="email" name="email" id="email" placeholder="Email" required />
+                      <input type="tel" name="phone" id="phoneHero" placeholder="phone" required />
                     </div>
                     <div class="col-md-4">
                       <div class="button text-center rounded-buttons">
@@ -171,7 +177,7 @@
             <!-- </div> -->
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 col-12">
+        <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
           <div class="header-image">
             <img src="assets\images\header\Hero_image.jpg" alt="#" />
           </div>
@@ -261,7 +267,7 @@
             </div>
             <div class="service-content">
               <h4>Experienced Tutors</h4>
-              <p>
+              <p class="d-none d-md-block">
                 Experienced and qualified tutors trained to provide individualized attention and support, ensuring student success.
               </p>
             </div>
@@ -274,7 +280,7 @@
             </div>
             <div class="service-content">
               <h4>On-demand Learning</h4>
-              <p>
+              <p class="d-none d-md-block">
                 Access on-demand learning with customizable plans tailored to match students' needs and learning styles for personalized success.
               </p>
             </div>
@@ -287,7 +293,7 @@
             </div>
             <div class="service-content">
               <h4>Skill Assessments</h4>
-              <p>
+              <p class="d-none d-md-block">
                 Track progress and optimize learning plans with regular skill assessments for continuous improvement and steady student progress.
               </p>
             </div>
@@ -300,7 +306,7 @@
             </div>
             <div class="service-content">
               <h4>Affordable Pricing</h4>
-              <p>
+              <p class="d-none d-md-block">
                 Accessible high-quality education at affordable prices, empowering students from all backgrounds to learn and succeed.
               </p>
             </div>
@@ -313,7 +319,7 @@
             </div>
             <div class="service-content">
               <h4>Personalized Feedback</h4>
-              <p>
+              <p class="d-none d-md-block">
                 Enhance performance with personalized feedback from our tutors, focusing on strengths, weaknesses, and improvement strategies.
               </p>
             </div>
@@ -325,9 +331,9 @@
               <i class="lni lni-network"></i>
             </div>
             <div class="service-content">
-              <h4>Collaborative Learning</h4>
-              <p>
-                Promote collaborative learning with group projects, online forums, and interactive activities, fostering social connections and peer learning.
+              <h4>Interactive Online Classroom</h4>
+              <p class="d-none d-md-block">
+                Our online platform will offer an interactive virtual classroom, where students can participate in live classes, ask questions, and interact with their peers and tutors.
               </p>
             </div>
           </div>
@@ -449,7 +455,6 @@
           <div class="pricing-style-fourteen middle">
             <div class="table-head">
               <h6 class="title">AS & A level</h4>
-                <!-- <p>Lorem Ipsum is simply dummy text of the printing and industry.</p> -->
                 <div class="price">
                   <h2 class="amount">
                     <span class="currency">AED</span>110<span class="duration">/hr </span>
@@ -486,16 +491,27 @@
       <div class="row justify-content-center">
         <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-9">
           <div class="inner-content">
-            <h2>We love to make perfect <br />solutions for your business</h2>
-            <p>
-              Why I say old chap that is, spiffing off his nut cor blimey
-              guvnords geeza<br />
-              bloke knees up bobby, sloshed arse William cack Richard. Bloke
-              fanny around chesed of bum bag old lost the pilot say there
-              spiffing off his nut.
-            </p>
+            <h2>Attention, Students! <br/> Unlock the Power of Mathematics at MathEzy!</h2>
+            <section class="section-work-data section ">
+              <div class="container grid grid-four-col">
+                <div class="row">
+                  <div class="col-4" style="font-size: 0.85rem;">
+                    <h2 data-number="5" class="counter-numbers">0</h2>
+                    <p>Countries Reached</p>
+                  </div>
+                  <div class="col-4" style="font-size: 0.8rem;">
+                    <h2 data-number="1080" class="counter-numbers">0</h2>
+                    <p>Hours Taught</p>
+                  </div>
+                  <div class="col-4" style="font-size: 0.85rem;">
+                    <h2 data-number="140" class="counter-numbers">0</h2>
+                    <p>Students Joined</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn-outline">Get Started</a>
+              <a href="#contact" class="btn primary-btn-outline">Book A Demo</a>
             </div>
           </div>
         </div>
@@ -507,8 +523,7 @@
 
 
   <!-- Start Latest News Area -->
-  <div id="blog" class="latest-news-area section">
-    <!--======  Start Section Title Five ======-->
+  <!-- <div id="blog" class="latest-news-area section">
     <div class="section-title-five">
       <div class="container">
         <div class="row">
@@ -523,89 +538,167 @@
             </div>
           </div>
         </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)"> Make your team a Design driven company </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/2.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  The newest web framework that changed the world
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/3.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  5 ways to improve user retention for your startup
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
       </div>
     </div>
-  </div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/2.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)">
+                        The newest web framework that changed the world
+                      </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/3.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)">
+                        5 ways to improve user retention for your startup
+                      </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/2.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)">
+                        The newest web framework that changed the world
+                      </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-news">
+                  <div class="image">
+                    <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/3.jpg" alt="Blog" /></a>
+                    <div class="meta-details">
+                      <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                      <span>BY TIM NORTON</span>
+                    </div>
+                  </div>
+                  <div class="content-body">
+                    <h4 class="title">
+                      <a href="javascript:void(0)">
+                        5 ways to improve user retention for your startup
+                      </a>
+                    </h4>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div> -->
   <!-- End Latest News Area -->
 
   <!-- Start Brand Area -->
@@ -731,15 +824,10 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <input type="text" name="phone" id="phone" placeholder="Phone" required />
+                  <input type="tel" name="phone" id="phone" placeholder="Phone" required style="padding-left: 52px;"/>
                 </div>
                 <div class="col-md-6">
                   <input type="text" name="grade" id="grade" placeholder="Grade" required />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
                 </div>
               </div>
               <div class="row">
@@ -760,13 +848,13 @@
   <!-- ========================= contact-section end ========================= -->
 
   <!-- ========================= map-section end ========================= -->
-  <section class="map-section map-style-9">
+  <!-- <section class="map-section map-style-9">
     <div class="map-container">
       <object style="border:0; height: 500px; width: 100%;"
         data="https://www.google.com/maps/embed/v1/place?q=East+Delhi,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></object>
     </div>
     </div>
-  </section>
+  </section> -->
   <!-- ========================= map-section end ========================= -->
 
   <!-- Start Footer Area -->
@@ -841,6 +929,23 @@
   <!--====== js ======-->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/glightbox.min.js"></script>
+  <!-- <script src="assets/js/intlTelNum/intlTelInput.js"></script>
+  <script>
+    let input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "assets/js/intlTelNum/utils.js"
+    });
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      nationalMode: true,
+      initialCountry: "ae",
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tiny-slider.js"></script>
   <!-- <script>
