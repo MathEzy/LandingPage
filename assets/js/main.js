@@ -92,15 +92,33 @@ sidebarLeft.classList.add("open");
 overlayLeft.classList.add("open");
 });
 
-// //========= glightbox
-// GLightbox({
-//     'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-//     'type': 'video',
-//     'source': 'youtube', //vimeo, youtube or local
-//     'width': 900,
-//     'autoplayVideos': true,
-// });
-
+//========= glightbox
+const gallery = GLightbox({
+    elements: [
+        {
+            'href': 'https://youtu.be/nlPLI81-Zxc',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        },
+        {
+            'href': 'https://youtu.be/VBbHq2Oko3k',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        },
+        {
+            'href': 'https://youtu.be/kL6eI6jMn8o',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        }
+    ]
+    
+});
 //header section form
 const scriptURL1 = 'https://script.google.com/macros/s/AKfycby1ju4XzEoShsv4bcUksDcsJh-GTS8EiTVxw2QWSbLQbCJwCjjhBx3QZI_SrxO8FPxtmQ/exec'
 const form1 = document.forms['heroSectionForm']
