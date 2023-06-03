@@ -125,7 +125,11 @@ const form1 = document.forms['heroSectionForm']
 
 form1.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL1, { method: 'POST', body: new FormData(form1)})
+    var country = phoneInput2.getSelectedCountryData();
+    let formData = new FormData(form1)
+    formData.append("country", country.name)
+    formData.append("countryDialCode", country.dialCode)
+    fetch(scriptURL1, { method: 'POST', body: formData})
     .then(response => console.log("Success", response))
     .then(SuccessToast())
     .then(() => {  window.location.reload(); })
